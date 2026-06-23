@@ -106,23 +106,18 @@ pipeline {
         
         stage('Deploy to Test Environment') {
             steps {
-                dir('author-book-management') {
-                    echo "========== Stage: Deploy to Test Environment =========="
-                    sh 'docker-compose down || true'
-                    sh 'docker-compose up -d'
-                    
-                    // Wait for application to start
-                    sleep(time: 30, unit: 'SECONDS')
+                script {
+                    echo 'Skipping deployment for now'
                 }
             }
         }
         
         stage('Integration Tests') {
             steps {
-                dir('author-book-management') {
+                script {
                     echo "========== Stage: Integration Tests =========="
                     // Run integration tests against deployed application
-                    sh 'mvn verify -DskipUnitTests'
+                    sh 'mvn verify '
                 }
             }
         }
