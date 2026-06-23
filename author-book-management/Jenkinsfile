@@ -24,16 +24,15 @@ pipeline {
         
         stage('Build') {
             steps {
-                script {
-                    echo "========== Stage: Build =========="
-                    sh 'mvn clean compile'
+                dir('author-book-management') {
+                     sh 'mvn clean compile'
                 }
             }
         }
         
         stage('Unit Tests') {
             steps {
-                script {
+                dir('author-book-management') {
                     echo "========== Stage: Unit Tests =========="
                     sh 'mvn test'
                 }
@@ -63,7 +62,7 @@ pipeline {
         
         stage('Package') {
             steps {
-                script {
+                dir('author-book-management'){
                     echo "========== Stage: Package =========="
                     sh 'mvn package -DskipTests'
                 }
@@ -72,6 +71,14 @@ pipeline {
                 success {
                     archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
                 }
+            }
+        }
+
+        stage('Debug') {
+            steps {
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'find . -name pom.xml'
             }
         }
         
