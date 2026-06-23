@@ -156,34 +156,13 @@ pipeline {
     post {
         always {
             echo "========== Pipeline Execution Completed =========="
-            // Clean up
-            sh 'docker system prune -f'
         }
         success {
             echo "========== BUILD SUCCESS =========="
-            emailext (
-                subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """
-                    <p>BUILD SUCCESS</p>
-                    <p>Job: ${env.JOB_NAME}</p>
-                    <p>Build Number: ${env.BUILD_NUMBER}</p>
-                    <p>Check console output at: ${env.BUILD_URL}</p>
-                """,
-                recipientProviders: [developers(), requestor()]
-            )
+            
         }
         failure {
             echo "========== BUILD FAILED =========="
-            emailext (
-                subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: """
-                    <p>BUILD FAILED</p>
-                    <p>Job: ${env.JOB_NAME}</p>
-                    <p>Build Number: ${env.BUILD_NUMBER}</p>
-                    <p>Check console output at: ${env.BUILD_URL}</p>
-                """,
-                recipientProviders: [developers(), requestor()]
-            )
         }
     }
 }
