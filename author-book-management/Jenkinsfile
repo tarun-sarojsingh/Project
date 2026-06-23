@@ -114,11 +114,11 @@ pipeline {
         
         stage('Integration Tests') {
             steps {
-                script {
+                dir('author-book-management') {
                     echo "========== Stage: Integration Tests =========="
-                    // Run integration tests against deployed application
-                    sh 'mvn verify '
-                }
+                    sh 'pwd'
+                    sh 'ls -la'
+                    sh 'mvn verify'
             }
         }
         
