@@ -1,416 +1,386 @@
-Author and Book Management System
-A comprehensive RESTful API for managing authors and books in a library system, built with Spring Boot, Hibernate/JPA, Docker, and deployed on Azure Cloud.
+# 📚 Author & Book Management System
 
-Java
-Spring Boot
-License
+A production-ready **RESTful Library Management API** built with **Spring Boot**, **Hibernate/JPA**, **PostgreSQL**, **Docker**, **Jenkins**, and **Azure Cloud**.
 
-📋 Table of Contents
-Overview
-Features
-Technologies
-Architecture
-Getting Started
-API Documentation
-Security
-Testing
-Docker Deployment
-CI/CD Pipeline
-Azure Deployment
-Design Patterns & SOLID Principles
-Project Structure
-Contributing
-License
-🎯 Overview
-This project is a production-ready RESTful API for library management that demonstrates best practices in Spring Boot development, including:
+The project demonstrates enterprise-level backend development practices including clean architecture, security, testing, CI/CD, containerization, and cloud deployment.
 
-Clean Architecture with clear separation of concerns
-SOLID principles and Design Patterns
-Comprehensive security with role-based access control
-Bulk operations with CSV import/export
-Complete CI/CD pipeline with Jenkins
-Containerization with Docker
-Cloud deployment on Azure
-✨ Features
-Core Functionality
-✅ Complete CRUD Operations for Authors and Books
-✅ Bulk Operations - Import/Export data via CSV files
-✅ Search & Filter - Search authors by name, books by title
-✅ Relationship Management - One-to-Many relationship between Authors and Books
-✅ Data Validation - Comprehensive validation rules
-✅ Duplicate Prevention - Ensures no duplicate authors or ISBNs
-Security Features
-🔒 Role-Based Access Control (RBAC)
-Admin: Full CRUD access to all resources
-Librarian: Read-only access (GET operations)
-🔒 BCrypt Password Encryption
-🔒 HTTP Basic Authentication
-🔒 Secure endpoints with Spring Security
-Quality & DevOps
-📝 Interactive API Documentation - Swagger/OpenAPI 3.0
-🧪 Comprehensive Testing - Unit & Integration tests with 80%+ coverage
-📊 Multi-level Logging - Separate log files for application, errors, and SQL
-🐳 Docker Support - Multi-stage builds with Docker Compose
-🔄 CI/CD Pipeline - Automated testing and deployment with Jenkins
-☁️ Cloud Ready - Deployable to Azure App Service
-🛠 Technologies
-Category	Technologies
-Backend	Java 21, Spring Boot 3.1.5, Spring Data JPA, Hibernate
-Security	Spring Security, BCrypt
-Database	PostgreSQL (Production), H2 (Development/Testing)
-API Documentation	SpringDoc OpenAPI (Swagger)
-Build Tool	Maven
-Libraries	Lombok, OpenCSV, Jackson
-Testing	JUnit 5, Mockito, AssertJ, Spring Boot Test
-Containerization	Docker, Docker Compose
-CI/CD	Jenkins
-Cloud	Azure (App Service, Container Registry, PostgreSQL)
-🏗 Architecture
-Layered Architecture
-text
+---
 
-┌─────────────────────────────────────────┐
-│   Controllers (REST API Layer)          │  ← HTTP Requests/Responses
-├─────────────────────────────────────────┤
-│   DTOs (Data Transfer Objects)          │  ← API Models
-├─────────────────────────────────────────┤
-│   Services (Business Logic Layer)       │  ← Business Rules
-├─────────────────────────────────────────┤
-│   Repositories (Data Access Layer)      │  ← Database Operations
-├─────────────────────────────────────────┤
-│   Entities (Domain Models)              │  ← JPA Entities
-├─────────────────────────────────────────┤
-│   Database (PostgreSQL/H2)              │  ← Persistent Storage
-└─────────────────────────────────────────┘
-Key Components
-Controllers: Handle HTTP requests, input validation, and response formatting
-Services: Implement business logic, transaction management, and orchestration
-Repositories: Abstract data access using Spring Data JPA
-Entities: JPA entities representing database tables
-DTOs: Data Transfer Objects for API communication
-Exception Handlers: Global exception handling for consistent error responses
-🚀 Getting Started
-Prerequisites
-Bash
+## 🚀 Features
 
-- Java 21 or higher
-- Maven 3.6+
-- Docker & Docker Compose (optional)
-- PostgreSQL (for production mode)
-- Git
-Installation & Setup
-Clone the repository
-Bash
+### 📖 Library Management
 
+* Complete CRUD operations for Authors and Books
+* Search authors by name
+* Search books by title
+* One-to-Many relationship between Authors and Books
+* Bulk import/export using CSV
+* Duplicate validation for Authors and ISBNs
+* Input validation with meaningful error handling
+
+---
+
+### 🔐 Security
+
+* Spring Security
+* HTTP Basic Authentication
+* BCrypt password encryption
+* Role-Based Access Control (RBAC)
+
+| Role          | Permissions      |
+| ------------- | ---------------- |
+| **ADMIN**     | Full CRUD access |
+| **LIBRARIAN** | Read-only access |
+
+---
+
+### 🧪 Quality & DevOps
+
+* Swagger / OpenAPI Documentation
+* Unit & Integration Testing
+* JaCoCo Code Coverage
+* Docker & Docker Compose
+* Jenkins CI/CD Pipeline
+* Azure App Service Deployment
+* Structured Logging
+
+---
+
+# 🛠 Tech Stack
+
+| Category         | Technologies                |
+| ---------------- | --------------------------- |
+| Language         | Java 21                     |
+| Framework        | Spring Boot 3               |
+| ORM              | Hibernate / Spring Data JPA |
+| Database         | PostgreSQL, H2              |
+| Security         | Spring Security, BCrypt     |
+| Documentation    | Swagger (OpenAPI 3)         |
+| Build Tool       | Maven                       |
+| Testing          | JUnit 5, Mockito, AssertJ   |
+| Containerization | Docker, Docker Compose      |
+| CI/CD            | Jenkins                     |
+| Cloud            | Azure App Service           |
+| Libraries        | Lombok, Jackson, OpenCSV    |
+
+---
+
+# 🏗 Architecture
+
+```
+Client
+   │
+REST Controllers
+   │
+DTO Layer
+   │
+Service Layer
+   │
+Repository Layer
+   │
+JPA Entities
+   │
+PostgreSQL / H2
+```
+
+### Layers
+
+* **Controllers** – REST endpoints
+* **DTOs** – Request & Response models
+* **Services** – Business logic
+* **Repositories** – Database operations
+* **Entities** – Domain models
+* **Exception Handlers** – Centralized error handling
+
+---
+
+# 📂 Project Structure
+
+```
+src
+├── main
+│   ├── controller
+│   ├── service
+│   ├── repository
+│   ├── entity
+│   ├── dto
+│   ├── config
+│   ├── security
+│   ├── exception
+│   └── util
+│
+└── test
+    ├── controller
+    ├── service
+    ├── repository
+    └── integration
+```
+
+---
+
+# ⚙ Getting Started
+
+## Prerequisites
+
+* Java 21+
+* Maven 3.6+
+* Docker (Optional)
+* PostgreSQL
+* Git
+
+---
+
+## Clone Repository
+
+```bash
 git clone https://github.com/your-username/author-book-management.git
+
 cd author-book-management
-Build the project
-Bash
+```
 
+---
+
+## Build
+
+```bash
 mvn clean install
-Run the application (Development Mode)
-Bash
+```
 
+---
+
+## Run
+
+```bash
 mvn spring-boot:run
-The application will start on http://localhost:8080 using H2 in-memory database.
+```
 
-Access the application
-API Base URL: http://localhost:8080/api/v1
-Swagger UI: http://localhost:8080/swagger-ui.html
-H2 Console: http://localhost:8080/h2-console
-JDBC URL: jdbc:h2:mem:librarydb
-Username: sa
-Password: (leave empty)
-Default Test Users
-Username	Password	Role	Permissions
-admin	admin123	ADMIN	Full CRUD
-librarian	librarian123	LIBRARIAN	Read Only
-📚 API Documentation
+Application starts at
+
+```
+http://localhost:8080
+```
+
+---
+
+# 📑 API Documentation
+
 Swagger UI
-Access interactive API documentation at: http://localhost:8080/swagger-ui.html
 
-Quick API Reference
-Authors API
-Method	Endpoint	Description	Required Role
-GET	/api/v1/authors	Get all authors	ADMIN, LIBRARIAN
-GET	/api/v1/authors/{id}	Get author by ID	ADMIN, LIBRARIAN
-GET	/api/v1/authors/search?lastName={name}	Search authors	ADMIN, LIBRARIAN
-POST	/api/v1/authors	Create new author	ADMIN
-PUT	/api/v1/authors/{id}	Update author	ADMIN
-DELETE	/api/v1/authors/{id}	Delete author	ADMIN
-Books API
-Method	Endpoint	Description	Required Role
-GET	/api/v1/books	Get all books	ADMIN, LIBRARIAN
-GET	/api/v1/books/{id}	Get book by ID	ADMIN, LIBRARIAN
-GET	/api/v1/books/search?title={title}	Search books	ADMIN, LIBRARIAN
-GET	/api/v1/books/author/{id}	Get books by author	ADMIN, LIBRARIAN
-POST	/api/v1/books	Create new book	ADMIN
-PUT	/api/v1/books/{id}	Update book	ADMIN
-PUT	/api/v1/books/bulk	Bulk update books	ADMIN
-DELETE	/api/v1/books/{id}	Delete book	ADMIN
-Bulk Operations API
-Method	Endpoint	Description	Required Role
-POST	/api/v1/bulk/authors/import	Import authors from CSV	ADMIN
-POST	/api/v1/bulk/books/import	Import books from CSV	ADMIN
-GET	/api/v1/bulk/authors/export	Export authors to CSV	ADMIN, LIBRARIAN
-GET	/api/v1/bulk/books/export	Export books to CSV	ADMIN, LIBRARIAN
-Sample API Requests
-Create an Author
-Bash
+```
+http://localhost:8080/swagger-ui.html
+```
 
-curl -X POST "http://localhost:8080/api/v1/authors" \
-  -u admin:admin123 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "firstName": "Jane",
-    "lastName": "Austen",
-    "email": "jane.austen@example.com",
-    "biography": "English novelist known for romantic fiction",
-    "birthYear": 1775
-  }'
-Create a Book
-Bash
+Base URL
 
-curl -X POST "http://localhost:8080/api/v1/books" \
-  -u admin:admin123 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "Pride and Prejudice",
-    "isbn": "978-0-14-143951-8",
-    "publicationYear": 1813,
-    "genre": "Romance",
-    "price": 12.99,
-    "availableCopies": 25,
-    "description": "Romantic novel of manners",
-    "authorId": 1
-  }'
-Get All Authors
-Bash
+```
+http://localhost:8080/api/v1
+```
 
-curl -X GET "http://localhost:8080/api/v1/authors" \
-  -u librarian:librarian123
-Import Authors from CSV
-Bash
+---
 
-curl -X POST "http://localhost:8080/api/v1/bulk/authors/import" \
-  -u admin:admin123 \
-  -F "file=@sample-authors.csv"
-Export Books to CSV
-Bash
+# 🔑 Default Credentials
 
-curl -X GET "http://localhost:8080/api/v1/bulk/books/export" \
-  -u librarian:librarian123 \
-  -o books-export.csv
-CSV File Formats
-Authors CSV Format
-csv
+| Username  | Password     | Role      |
+| --------- | ------------ | --------- |
+| admin     | admin123     | ADMIN     |
+| librarian | librarian123 | LIBRARIAN |
 
+---
+
+# 📚 API Endpoints
+
+## Authors
+
+| Method | Endpoint          |
+| ------ | ----------------- |
+| GET    | `/authors`        |
+| GET    | `/authors/{id}`   |
+| GET    | `/authors/search` |
+| POST   | `/authors`        |
+| PUT    | `/authors/{id}`   |
+| DELETE | `/authors/{id}`   |
+
+---
+
+## Books
+
+| Method | Endpoint             |
+| ------ | -------------------- |
+| GET    | `/books`             |
+| GET    | `/books/{id}`        |
+| GET    | `/books/search`      |
+| GET    | `/books/author/{id}` |
+| POST   | `/books`             |
+| PUT    | `/books/{id}`        |
+| PUT    | `/books/bulk`        |
+| DELETE | `/books/{id}`        |
+
+---
+
+## Bulk Operations
+
+| Method | Endpoint               |
+| ------ | ---------------------- |
+| POST   | `/bulk/authors/import` |
+| POST   | `/bulk/books/import`   |
+| GET    | `/bulk/authors/export` |
+| GET    | `/bulk/books/export`   |
+
+---
+
+# 📄 CSV Format
+
+### Authors
+
+```csv
 First Name,Last Name,Email,Biography,Birth Year
-Jane,Austen,jane.austen@example.com,English novelist,1775
-George,Orwell,george.orwell@example.com,English novelist and essayist,1903
-Books CSV Format
-csv
+```
 
+### Books
+
+```csv
 Title,ISBN,Publication Year,Genre,Price,Available Copies,Description,Author ID
-1984,978-0-452-28423-4,1949,Dystopian,19.99,20,Dystopian fiction,1
-Animal Farm,978-0-452-28424-1,1945,Political Satire,15.99,18,Allegorical novella,1
-🔒 Security
-Authentication
-The API uses HTTP Basic Authentication. Include credentials in requests:
+```
 
-Bash
+---
 
-# Using curl
-curl -u username:password http://localhost:8080/api/v1/authors
+# 🧪 Testing
 
-# Or with Authorization header
-curl -H "Authorization: Basic base64(username:password)" http://localhost:8080/api/v1/authors
-Authorization (Role-Based Access Control)
-Role	Permissions
-ADMIN	✅ All CRUD operations<br>✅ Bulk import/export<br>✅ User management
-LIBRARIAN	✅ View all data (GET requests)<br>✅ Export data<br>❌ Create/Update/Delete operations
-Password Security
-All passwords are encrypted using BCrypt with strength factor of 10
-Passwords are never stored in plain text
-Password hashing is handled automatically by Spring Security
-Endpoint Security Matrix
-Endpoint Pattern	ADMIN	LIBRARIAN	Anonymous
-GET /api/v1/**	✅	✅	❌
-POST /api/v1/**	✅	❌	❌
-PUT /api/v1/**	✅	❌	❌
-DELETE /api/v1/**	✅	❌	❌
-/swagger-ui/**	✅	✅	✅
-🧪 Testing
-Running Tests
-Bash
+Run all tests
 
-# Run all tests
+```bash
 mvn test
+```
 
-# Run specific test class
-mvn test -Dtest=AuthorServiceTest
+Generate JaCoCo Report
 
-# Run tests with coverage report
+```bash
 mvn clean test jacoco:report
+```
 
-# Run only integration tests
-mvn test -Dtest=*IntegrationTest
+Coverage Goals
 
-# Run only unit tests
-mvn test -Dtest=*Test -Dtest=!*IntegrationTest
-Test Coverage
-View coverage report at: target/site/jacoco/index.html
+* Overall → 80%+
+* Service Layer → 90%+
+* Controller Layer → 85%+
+* Repository Layer → 70%+
 
-Coverage Goals:
+---
 
-Overall: 80%+
-Service Layer: 90%+
-Repository Layer: 70%+
-Controller Layer: 85%+
-Test Structure
-text
+# 🐳 Docker
 
-src/test/java/
-└── com.library.management
-    ├── controller/
-    │   ├── AuthorControllerTest.java           (Unit Tests)
-    │   ├── AuthorControllerIntegrationTest.java (Integration Tests)
-    │   └── BookControllerIntegrationTest.java
-    ├── service/
-    │   ├── AuthorServiceTest.java
-    │   └── BookServiceTest.java
-    └── repository/
-        └── AuthorRepositoryTest.java
-Sample Test Cases
-✅ CRUD operations for Authors and Books
-✅ Validation rules enforcement
-✅ Duplicate prevention logic
-✅ Security and authorization
-✅ Exception handling
-✅ Bulk operations
-✅ Search functionality
-🐳 Docker Deployment
-Build Docker Image
-Bash
+## Build Image
 
-docker build -t library-management:latest .
-Run with Docker Compose
-Bash
+```bash
+docker build -t author-book-management .
+```
 
-# Start all services (PostgreSQL + Application)
+## Start Containers
+
+```bash
 docker-compose up -d
+```
 
-# View logs
-docker-compose logs -f app
+## Stop Containers
 
-# Stop all services
+```bash
 docker-compose down
+```
 
-# Stop and remove volumes
-docker-compose down -v
-Docker Services
-Service	Port	Description
-app	8080	Spring Boot Application
-postgres	5432	PostgreSQL Database
-Environment Variables
-Bash
+---
 
-# Database Configuration
-DATABASE_URL=jdbc:postgresql://postgres:5432/librarydb
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
+# 🔄 CI/CD Pipeline
 
-# Application Profile
-SPRING_PROFILES_ACTIVE=prod
-Docker Image Details
-Base Image: eclipse-temurin:17-jre-alpine
-Size: ~180 MB (optimized with multi-stage build)
-Security: Runs as non-root user
-Health Check: Configured for container orchestration
-🔄 CI/CD Pipeline
-Jenkins Pipeline Overview
-The project includes a complete Jenkins pipeline with the following stages:
+The Jenkins pipeline automates:
 
-text
+* Checkout Source
+* Build
+* Unit Tests
+* JaCoCo Coverage
+* Docker Image Build
+* Docker Push
+* Azure Deployment
+* Integration Tests
+* Security Scan
 
-1. Checkout        → Clone repository
-2. Build           → Compile source code
-3. Unit Tests      → Run tests with JaCoCo coverage
-4. Code Quality    → Static code analysis
-5. Package         → Create JAR file
-6. Docker Build    → Build container image
-7. Docker Push     → Push to registry
-8. Deploy Test     → Deploy to test environment
-9. Integration     → Run integration tests
-10. Security Scan  → Vulnerability scanning
-11. Deploy Azure   → Deploy to Azure (main branch only)
-Jenkins Setup
-Required Plugins:
+Pipeline configuration is available in:
 
-Git
-Maven Integration Plugin
-Docker Pipeline
-JUnit Plugin
-JaCoCo Plugin
-Email Extension Plugin
-Azure CLI Plugin
-Triggering Builds
-Automatic: Webhook on push to repository
-Manual: Trigger from Jenkins UI
-Scheduled: Nightly builds (optional)
-Pipeline Configuration
-The pipeline is defined in Jenkinsfile at the root of the repository.
+```
+Jenkinsfile
+```
 
-groovy
+---
 
-pipeline {
-    agent any
-    
-    tools {
-        maven 'Maven-3.9.5'
-        jdk 'JDK-17'
-    }
-    
-    stages {
-        stage('Build') { ... }
-        stage('Test') { ... }
-        stage('Deploy') { ... }
-    }
-}
-Build Notifications
-✅ Success: Email notification with build summary
-❌ Failure: Email notification with error details
-📊 Reports: Test results and coverage reports archived
-☁️ Azure Deployment
-Prerequisites
-Azure CLI installed and configured
-Azure subscription
-Permissions to create resources
-Quick Deployment
-Bash
+# ☁ Azure Deployment
 
-# Make script executable
-chmod +x deploy-azure.sh
+### Resources
 
-# Run deployment
+* Azure App Service
+* Azure Container Registry
+* Azure Database for PostgreSQL
+* Resource Group
+
+Deploy using
+
+```bash
 ./deploy-azure.sh
-Azure Resources Created
-Resource	Type	Purpose
-Resource Group	Resource Container	Groups all resources
-Container Registry	ACR	Stores Docker images
-PostgreSQL Server	Flexible Server	Production database
-App Service Plan	Linux B1	Hosting plan
-Web App	Container	Runs the application
-Access Deployed Application
-After successful deployment:
+```
 
-text
+Application URL
 
-Application URL: https://{your-app-name}.azurewebsites.net
-Swagger UI: https://{your-app-name}.azurewebsites.net/swagger-ui.html
-View Application Logs
-Bash
+```
+https://<app-name>.azurewebsites.net
+```
 
-az webapp log tail \
-  --name {your-app-name} \
-  --resource-group library-management-rg
+Swagger
+
+```
+https://<app-name>.azurewebsites.net/swagger-ui.html
+```
+
+---
+
+# 🔒 Security Summary
+
+* Spring Security
+* HTTP Basic Authentication
+* BCrypt Password Encryption
+* RBAC Authorization
+* Endpoint Protection
+* Input Validation
+
+---
+
+# 📈 Future Enhancements
+
+* JWT Authentication
+* Redis Caching
+* Elasticsearch
+* Kubernetes Deployment
+* Prometheus & Grafana Monitoring
+* Kafka Event Streaming
+* API Rate Limiting
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Tarun Singh**
+
+If you found this project useful, don't forget to ⭐ the repository.
