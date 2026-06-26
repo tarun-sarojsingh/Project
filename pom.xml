@@ -123,7 +123,7 @@
                 </configuration>
             </plugin>
 
-            <!-- JaCoCo for code coverage reports
+            <!-- JaCoCo for code coverage reports -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -163,7 +163,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
         </plugins>
     </build>
 </project>
