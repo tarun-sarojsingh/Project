@@ -3156,3 +3156,1770 @@
 2026-06-26 20:53:05 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-26 20:53:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-06-26 20:53:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 21:01:06 [main] INFO  c.e.l.AuthorControllerIntegrationTest - Starting AuthorControllerIntegrationTest using Java 21 with PID 1764 (started by tarunsingh01 in C:\Users\tarunsingh01\OneDrive - Nagarro\Desktop\j\Project)
+2026-06-26 21:01:06 [main] DEBUG c.e.l.AuthorControllerIntegrationTest - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-26 21:01:06 [main] INFO  c.e.l.AuthorControllerIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+2026-06-26 21:01:06 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3ebc955b
+2026-06-26 21:01:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 21:01:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2026-06-26 21:01:09 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2026-06-26 21:01:09 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-06-26 21:01:09 [main] INFO  o.f.c.i.license.VersionPrinter - 
+2026-06-26 21:01:09 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 21:01:11 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/librarydb user=SA
+2026-06-26 21:01:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 21:01:11 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:file:./data/librarydb (H2 2.1)
+2026-06-26 21:01:11 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.038s)
+2026-06-26 21:01:11 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": 2
+2026-06-26 21:01:11 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "PUBLIC" is up to date. No migration necessary.
+2026-06-26 21:01:11 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 21:01:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-26 21:01:12 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-26 21:01:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 21:01:14 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 21:01:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 21:01:15 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 21:01:16 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f604620, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f6c7706, org.springframework.security.web.context.SecurityContextHolderFilter@12ab5760, org.springframework.security.web.header.HeaderWriterFilter@41034c9, org.springframework.security.web.authentication.logout.LogoutFilter@68c89396, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a3f567c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@555f6634, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e8bbc81, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61b50fc7, org.springframework.security.web.session.SessionManagementFilter@b896365, org.springframework.security.web.access.ExceptionTranslationFilter@738118e5, org.springframework.security.web.access.intercept.AuthorizationFilter@690fd6b3]
+2026-06-26 21:01:16 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-26 21:01:16 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 25 mappings in 'requestMappingHandlerMapping'
+2026-06-26 21:01:17 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-26 21:01:17 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-26 21:01:17 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/librarydb'
+2026-06-26 21:01:17 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-06-26 21:01:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-06-26 21:01:17 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-06-26 21:01:17 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 20 ms
+2026-06-26 21:01:17 [main] INFO  c.e.l.AuthorControllerIntegrationTest - Started AuthorControllerIntegrationTest in 11.569 seconds (process running for 14.165)
+2026-06-26 21:01:17 [main] DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User x */ select
+            count(*) 
+        from
+            users u1_0
+2026-06-26 21:01:18 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:18 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:18 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:18 [main] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/authors/597
+2026-06-26 21:01:18 [main] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/authors/597
+2026-06-26 21:01:18 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#updateAuthor(Long, AuthorDTO)
+2026-06-26 21:01:18 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [AuthorDTO(id=null, firstName=John, lastName=Doe, email=john.doe.updated@example.com, biography=Updat (truncated)...]
+2026-06-26 21:01:18 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.updateAuthor(java.lang.Long,com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:18 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.updateAuthor(java.lang.Long,com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:18 [main] INFO  c.e.l.controller.AuthorController - PUT /api/v1/authors/597 - Updating author
+2026-06-26 21:01:18 [main] INFO  c.e.library.service.AuthorService - Updating author with id: 597
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id 
+    from
+        authors a1_0 
+    where
+        a1_0.email=? 
+    fetch
+        first ? rows only
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Author updated successfully with id: 597
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [AuthorDTO(id=597, firstName=John, lastName=Doe, email=john.doe.updated@example.com, biography=Update (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors/598
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/authors/598
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#getAuthorById(Long)
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAuthorById(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAuthorById(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - GET /api/v1/authors/598 - Fetching author
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Fetching author with id: 598
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        a 
+    FROM
+        Author a 
+    LEFT JOIN
+        
+    FETCH
+        a.books 
+    WHERE
+        a.id = ?1 */ select
+            a1_0.id,
+            a1_0.biography,
+            a1_0.birth_year,
+            b1_0.author_id,
+            b1_0.id,
+            b1_0.available_copies,
+            b1_0.created_at,
+            b1_0.description,
+            b1_0.genre,
+            b1_0.isbn,
+            b1_0.price,
+            b1_0.publication_year,
+            b1_0.title,
+            b1_0.updated_at,
+            a1_0.created_at,
+            a1_0.email,
+            a1_0.first_name,
+            a1_0.last_name,
+            a1_0.updated_at 
+        from
+            authors a1_0 
+        left join
+            books b1_0 
+                on a1_0.id=b1_0.author_id 
+        where
+            a1_0.id=?
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [AuthorDTO(id=598, firstName=John, lastName=Doe, email=john.doe@example.com, biography=Test biography (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#createAuthor(AuthorDTO)
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [AuthorDTO(id=null, firstName=, lastName=Smith, email=invalid-email, biography=null, birthYear=null,  (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.library.exception.GlobalExceptionHandler#handleValidationExceptions(MethodArgumentNotValidException, WebRequest)
+2026-06-26 21:01:19 [main] ERROR c.e.l.e.GlobalExceptionHandler - Validation error: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.library.dto.AuthorDTO> com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO) with 3 errors: [Field error in object 'authorDTO' on field 'email': rejected value [invalid-email]; codes [Email.authorDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [authorDTO.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@663d48d1,.*]; default message [Email should be valid]] [Field error in object 'authorDTO' on field 'firstName': rejected value []; codes [NotBlank.authorDTO.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [authorDTO.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'authorDTO' on field 'firstName': rejected value []; codes [Size.authorDTO.firstName,Size.firstName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [authorDTO.firstName,firstName]; arguments []; default message [firstName],50,2]; default message [First name must be between 2 and 50 characters]] 
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2026-06-26T21:01:19.220911800, status=400, error=Validation Failed, message= (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.library.dto.AuthorDTO> com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO) with 3 errors: [Field error in object 'authorDTO' on field 'email': rejected value [invalid-email]; codes [Email.authorDTO.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [authorDTO.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@663d48d1,.*]; default message [Email should be valid]] [Field error in object 'authorDTO' on field 'firstName': rejected value []; codes [NotBlank.authorDTO.firstName,NotBlank.firstName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [authorDTO.firstName,firstName]; arguments []; default message [firstName]]; default message [First name is required]] [Field error in object 'authorDTO' on field 'firstName': rejected value []; codes [Size.authorDTO.firstName,Size.firstName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [authorDTO.firstName,firstName]; arguments []; default message [firstName],50,2]; default message [First name must be between 2 and 50 characters]] ]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#createAuthor(AuthorDTO)
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [AuthorDTO(id=null, firstName=Jane, lastName=Smith, email=jane.smith@example.com, biography=Author bi (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - POST /api/v1/authors - Creating new author
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Creating new author: Jane Smith
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id 
+    from
+        authors a1_0 
+    where
+        a1_0.email=? 
+    fetch
+        first ? rows only
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id 
+    from
+        authors a1_0 
+    where
+        a1_0.first_name=? 
+        and a1_0.last_name=? 
+    fetch
+        first ? rows only
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Author created successfully with id: 601
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [AuthorDTO(id=601, firstName=Jane, lastName=Smith, email=jane.smith@example.com, biography=Author bio (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing DELETE /api/v1/authors/602
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured DELETE /api/v1/authors/602
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#deleteAuthor(Long)
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.deleteAuthor(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.deleteAuthor(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - DELETE /api/v1/authors/602 - Deleting author
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Deleting author with id: 602
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Author deleted successfully with id: 602
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors/602
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/authors/602
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#getAuthorById(Long)
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAuthorById(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAuthorById(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - GET /api/v1/authors/602 - Fetching author
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Fetching author with id: 602
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        a 
+    FROM
+        Author a 
+    LEFT JOIN
+        
+    FETCH
+        a.books 
+    WHERE
+        a.id = ?1 */ select
+            a1_0.id,
+            a1_0.biography,
+            a1_0.birth_year,
+            b1_0.author_id,
+            b1_0.id,
+            b1_0.available_copies,
+            b1_0.created_at,
+            b1_0.description,
+            b1_0.genre,
+            b1_0.isbn,
+            b1_0.price,
+            b1_0.publication_year,
+            b1_0.title,
+            b1_0.updated_at,
+            a1_0.created_at,
+            a1_0.email,
+            a1_0.first_name,
+            a1_0.last_name,
+            a1_0.updated_at 
+        from
+            authors a1_0 
+        left join
+            books b1_0 
+                on a1_0.id=b1_0.author_id 
+        where
+            a1_0.id=?
+2026-06-26 21:01:19 [main] ERROR c.e.library.service.AuthorService - Author not found with id: 602
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.library.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException, WebRequest)
+2026-06-26 21:01:19 [main] ERROR c.e.l.e.GlobalExceptionHandler - Resource not found: Author not found with id: 602
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2026-06-26T21:01:19.333874800, status=404, error=Not Found, message=Author n (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.library.exception.ResourceNotFoundException: Author not found with id: 602]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors/999
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/authors/999
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#getAuthorById(Long)
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAuthorById(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAuthorById(java.lang.Long); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - GET /api/v1/authors/999 - Fetching author
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Fetching author with id: 999
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        a 
+    FROM
+        Author a 
+    LEFT JOIN
+        
+    FETCH
+        a.books 
+    WHERE
+        a.id = ?1 */ select
+            a1_0.id,
+            a1_0.biography,
+            a1_0.birth_year,
+            b1_0.author_id,
+            b1_0.id,
+            b1_0.available_copies,
+            b1_0.created_at,
+            b1_0.description,
+            b1_0.genre,
+            b1_0.isbn,
+            b1_0.price,
+            b1_0.publication_year,
+            b1_0.title,
+            b1_0.updated_at,
+            a1_0.created_at,
+            a1_0.email,
+            a1_0.first_name,
+            a1_0.last_name,
+            a1_0.updated_at 
+        from
+            authors a1_0 
+        left join
+            books b1_0 
+                on a1_0.id=b1_0.author_id 
+        where
+            a1_0.id=?
+2026-06-26 21:01:19 [main] ERROR c.e.library.service.AuthorService - Author not found with id: 999
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.library.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException, WebRequest)
+2026-06-26 21:01:19 [main] ERROR c.e.l.e.GlobalExceptionHandler - Resource not found: Author not found with id: 999
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2026-06-26T21:01:19.367607600, status=404, error=Not Found, message=Author n (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.library.exception.ResourceNotFoundException: Author not found with id: 999]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#createAuthor(AuthorDTO)
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [AuthorDTO(id=null, firstName=Another, lastName=Author, email=john.doe@example.com, biography=null, b (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - POST /api/v1/authors - Creating new author
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Creating new author: Another Author
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id 
+    from
+        authors a1_0 
+    where
+        a1_0.email=? 
+    fetch
+        first ? rows only
+2026-06-26 21:01:19 [main] ERROR c.e.library.service.AuthorService - Email already exists: john.doe@example.com
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.library.exception.GlobalExceptionHandler#handleDuplicateResourceException(DuplicateResourceException, WebRequest)
+2026-06-26 21:01:19 [main] ERROR c.e.l.e.GlobalExceptionHandler - Duplicate resource: Email already exists: john.doe@example.com
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2026-06-26T21:01:19.442280400, status=409, error=Conflict, message=Email alr (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.library.exception.DuplicateResourceException: Email already exists: john.doe@example.com]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#getAllAuthors()
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAllAuthors(); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAllAuthors(); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - GET /api/v1/authors - Fetching all authors
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Fetching all authors
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG c.e.library.service.AuthorService - Found 1 authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[AuthorDTO(id=605, firstName=John, lastName=Doe, email=john.doe@example.com, biography=Test biograph (truncated)...]
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:01:19 [main] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.w.a.DelegatingAuthenticationEntryPoint - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@7665c205
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing DELETE /api/v1/authors/608
+2026-06-26 21:01:19 [main] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#getAllAuthors()
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAllAuthors(); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAllAuthors(); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:01:19 [main] INFO  c.e.l.controller.AuthorController - GET /api/v1/authors - Fetching all authors
+2026-06-26 21:01:19 [main] INFO  c.e.library.service.AuthorService - Fetching all authors
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:19 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:19 [main] DEBUG c.e.library.service.AuthorService - Found 1 authors
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:19 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[AuthorDTO(id=609, firstName=John, lastName=Doe, email=john.doe@example.com, biography=Test biograph (truncated)...]
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Fetching author with id: 999
+2026-06-26 21:01:20 [main] ERROR c.e.library.service.AuthorService - Author not found with id: 999
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Fetching all authors
+2026-06-26 21:01:20 [main] DEBUG c.e.library.service.AuthorService - Found 1 authors
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Searching authors by last name: Doe
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Updating author with id: 1
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Author updated successfully with id: 1
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Creating new author: John Doe
+2026-06-26 21:01:20 [main] ERROR c.e.library.service.AuthorService - Email already exists: john.doe@example.com
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Fetching author with id: 1
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Deleting author with id: 1
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Author deleted successfully with id: 1
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Creating new author: John Doe
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.AuthorService - Author created successfully with id: 1
+2026-06-26 21:01:20 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.library.BookControllerIntegrationTest]: BookControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-26 21:01:20 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.library.AuthorBookManagementApplication for test class com.example.library.BookControllerIntegrationTest
+2026-06-26 21:01:20 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:20 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:20 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:20 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:20 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:20 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/books/256
+2026-06-26 21:01:20 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/books/256
+2026-06-26 21:01:20 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#getBookById(Long)
+2026-06-26 21:01:20 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.getBookById(java.lang.Long); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:20 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.getBookById(java.lang.Long); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:20 [main] INFO  c.e.l.controller.BookController - GET /api/v1/books/256 - Fetching book
+2026-06-26 21:01:20 [main] INFO  c.e.library.service.BookService - Fetching book with id: 256
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        b 
+    FROM
+        Book b 
+    JOIN
+        
+    FETCH
+        b.author 
+    WHERE
+        b.id = ?1 */ select
+            b1_0.id,
+            b1_0.author_id,
+            a1_0.id,
+            a1_0.biography,
+            a1_0.birth_year,
+            a1_0.created_at,
+            a1_0.email,
+            a1_0.first_name,
+            a1_0.last_name,
+            a1_0.updated_at,
+            b1_0.available_copies,
+            b1_0.created_at,
+            b1_0.description,
+            b1_0.genre,
+            b1_0.isbn,
+            b1_0.price,
+            b1_0.publication_year,
+            b1_0.title,
+            b1_0.updated_at 
+        from
+            books b1_0 
+        join
+            authors a1_0 
+                on a1_0.id=b1_0.author_id 
+        where
+            b1_0.id=?
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [BookDTO(id=256, title=Test Book, isbn=978-3-16-148410-0, publicationYear=2023, genre=Fiction, price= (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#getAllBooks()
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.getAllBooks(); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.getAllBooks(); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] INFO  c.e.l.controller.BookController - GET /api/v1/books - Fetching all books
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Fetching all books
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG c.e.library.service.BookService - Found 1 books
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[BookDTO(id=257, title=Test Book, isbn=978-3-16-148410-0, publicationYear=2023, genre=Fiction, price (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing DELETE /api/v1/books/258
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Secured DELETE /api/v1/books/258
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#deleteBook(Long)
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.deleteBook(java.lang.Long); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.deleteBook(java.lang.Long); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] INFO  c.e.l.controller.BookController - DELETE /api/v1/books/258 - Deleting book
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Deleting book with id: 258
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Book deleted successfully with id: 258
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/books/258
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/books/258
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#getBookById(Long)
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.getBookById(java.lang.Long); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.getBookById(java.lang.Long); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] INFO  c.e.l.controller.BookController - GET /api/v1/books/258 - Fetching book
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Fetching book with id: 258
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Book */delete 
+    from
+        books 
+    where
+        id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* SELECT
+        b 
+    FROM
+        Book b 
+    JOIN
+        
+    FETCH
+        b.author 
+    WHERE
+        b.id = ?1 */ select
+            b1_0.id,
+            b1_0.author_id,
+            a1_0.id,
+            a1_0.biography,
+            a1_0.birth_year,
+            a1_0.created_at,
+            a1_0.email,
+            a1_0.first_name,
+            a1_0.last_name,
+            a1_0.updated_at,
+            b1_0.available_copies,
+            b1_0.created_at,
+            b1_0.description,
+            b1_0.genre,
+            b1_0.isbn,
+            b1_0.price,
+            b1_0.publication_year,
+            b1_0.title,
+            b1_0.updated_at 
+        from
+            books b1_0 
+        join
+            authors a1_0 
+                on a1_0.id=b1_0.author_id 
+        where
+            b1_0.id=?
+2026-06-26 21:01:21 [main] ERROR c.e.library.service.BookService - Book not found with id: 258
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.library.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException, WebRequest)
+2026-06-26 21:01:21 [main] ERROR c.e.l.e.GlobalExceptionHandler - Resource not found: Book not found with id: 258
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2026-06-26T21:01:21.282674100, status=404, error=Not Found, message=Book not (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.library.exception.ResourceNotFoundException: Book not found with id: 258]
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#createBook(BookDTO)
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookDTO(id=null, title=New Book, isbn=978-3-16-148410-1, publicationYear=2024, genre=Science Fiction (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.createBook(com.example.library.dto.BookDTO); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.createBook(com.example.library.dto.BookDTO); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] INFO  c.e.l.controller.BookController - POST /api/v1/books - Creating new book
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Creating new book: New Book
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id 
+    from
+        books b1_0 
+    where
+        b1_0.isbn=? 
+    fetch
+        first ? rows only
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Book created successfully with id: 261
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [BookDTO(id=261, title=New Book, isbn=978-3-16-148410-1, publicationYear=2024, genre=Science Fiction, (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/books
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#createBook(BookDTO)
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookDTO(id=null, title=Duplicate Book, isbn=978-3-16-148410-0, publicationYear=2024, genre=Fiction,  (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.createBook(com.example.library.dto.BookDTO); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.createBook(com.example.library.dto.BookDTO); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] INFO  c.e.l.controller.BookController - POST /api/v1/books - Creating new book
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Creating new book: Duplicate Book
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* delete for com.example.library.entity.Author */delete 
+    from
+        authors 
+    where
+        id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id 
+    from
+        books b1_0 
+    where
+        b1_0.isbn=? 
+    fetch
+        first ? rows only
+2026-06-26 21:01:21 [main] ERROR c.e.library.service.BookService - ISBN already exists: 978-3-16-148410-0
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.library.exception.GlobalExceptionHandler#handleDuplicateResourceException(DuplicateResourceException, WebRequest)
+2026-06-26 21:01:21 [main] ERROR c.e.l.e.GlobalExceptionHandler - Duplicate resource: Book with ISBN already exists: 978-3-16-148410-0
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(timestamp=2026-06-26T21:01:21.474179800, status=409, error=Conflict, message=Book with (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.library.exception.DuplicateResourceException: Book with ISBN already exists: 978-3-16-148410-0]
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    select
+        b1_0.author_id,
+        b1_0.id,
+        b1_0.available_copies,
+        b1_0.created_at,
+        b1_0.description,
+        b1_0.genre,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.publication_year,
+        b1_0.title,
+        b1_0.updated_at 
+    from
+        books b1_0 
+    where
+        b1_0.author_id=?
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Book */insert 
+    into
+        books (author_id,available_copies,created_at,description,genre,isbn,price,publication_year,title,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,?,default)
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Securing PUT /api/v1/books/263
+2026-06-26 21:01:21 [main] DEBUG o.s.security.web.FilterChainProxy - Secured PUT /api/v1/books/263
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.BookController#updateBook(Long, BookDTO)
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookDTO(id=null, title=Updated Title, isbn=978-3-16-148410-0, publicationYear=2023, genre=Fiction, p (truncated)...]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.updateBook(java.lang.Long,com.example.library.dto.BookDTO); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.BookController.updateBook(java.lang.Long,com.example.library.dto.BookDTO); target is of class [com.example.library.controller.BookController]
+2026-06-26 21:01:21 [main] INFO  c.e.l.controller.BookController - PUT /api/v1/books/263 - Updating book
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Updating book with id: 263
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Book updated successfully with id: 263
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:01:21 [main] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [BookDTO(id=263, title=Updated Title, isbn=978-3-16-148410-0, publicationYear=2023, genre=Fiction, pr (truncated)...]
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Creating new book: Test Book
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Book created successfully with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Fetching book with id: 999
+2026-06-26 21:01:21 [main] ERROR c.e.library.service.BookService - Book not found with id: 999
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Fetching books for author id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Creating new book: Test Book
+2026-06-26 21:01:21 [main] ERROR c.e.library.service.BookService - Author not found with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Creating new book: Test Book
+2026-06-26 21:01:21 [main] ERROR c.e.library.service.BookService - ISBN already exists: 978-3-16-148410-0
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Fetching all books
+2026-06-26 21:01:21 [main] DEBUG c.e.library.service.BookService - Found 1 books
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Updating book with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Book updated successfully with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Deleting book with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Book deleted successfully with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Fetching book with id: 1
+2026-06-26 21:01:21 [main] INFO  c.e.library.service.BookService - Searching books by title: Test
+2026-06-26 21:01:22 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3ebc955b, started on Fri Jun 26 21:01:06 IST 2026
+2026-06-26 21:01:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 21:01:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 21:01:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 21:01:39 [main] INFO  c.e.l.AuthorBookManagementApplication - Starting AuthorBookManagementApplication using Java 21 with PID 28144 (C:\Users\tarunsingh01\OneDrive - Nagarro\Desktop\j\Project\target\classes started by tarunsingh01 in C:\Users\tarunsingh01\OneDrive - Nagarro\Desktop\j\Project)
+2026-06-26 21:01:39 [main] DEBUG c.e.l.AuthorBookManagementApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-06-26 21:01:39 [main] INFO  c.e.l.AuthorBookManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-26 21:01:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 21:01:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2026-06-26 21:01:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2026-06-26 21:01:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 21:01:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-06-26 21:01:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-26 21:01:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1537 ms
+2026-06-26 21:01:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 21:01:43 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn1: url=jdbc:h2:file:./data/librarydb user=SA
+2026-06-26 21:01:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 21:01:43 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/librarydb'
+2026-06-26 21:01:43 [main] DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2026-06-26 21:01:43 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2026-06-26 21:01:43 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2026-06-26 21:01:43 [main] INFO  o.f.c.i.license.VersionPrinter - 
+2026-06-26 21:01:43 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:file:./data/librarydb (H2 2.1)
+2026-06-26 21:01:43 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.018s)
+2026-06-26 21:01:43 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": 2
+2026-06-26 21:01:43 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "PUBLIC" is up to date. No migration necessary.
+2026-06-26 21:01:43 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 21:01:43 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2026-06-26 21:01:43 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2026-06-26 21:01:43 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 21:01:44 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 21:01:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 21:01:45 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 21:01:45 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@cc655a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67dc7d0, org.springframework.security.web.context.SecurityContextHolderFilter@73760b13, org.springframework.security.web.header.HeaderWriterFilter@7e93497d, org.springframework.security.web.authentication.logout.LogoutFilter@8508dae, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f9f3516, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a6aecec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12f52ca4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46b2e0e4, org.springframework.security.web.session.SessionManagementFilter@4cda8d3b, org.springframework.security.web.access.ExceptionTranslationFilter@7bbd133c, org.springframework.security.web.access.intercept.AuthorizationFilter@4db8b888]
+2026-06-26 21:01:45 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-26 21:01:45 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 25 mappings in 'requestMappingHandlerMapping'
+2026-06-26 21:01:45 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-26 21:01:45 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-26 21:01:46 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-06-26 21:01:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2026-06-26 21:01:46 [main] INFO  c.e.l.AuthorBookManagementApplication - Started AuthorBookManagementApplication in 7.218 seconds (process running for 7.593)
+2026-06-26 21:01:46 [main] DEBUG org.hibernate.SQL - 
+    /* select
+        count(*) 
+    from
+        User x */ select
+            count(*) 
+        from
+            users u1_0
+2026-06-26 21:02:07 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 21:02:07 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6ffc12a3
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@24a29d8
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-06-26 21:02:07 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+2026-06-26 21:02:07 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.HomeController#home()
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.view.RedirectView - View name 'redirect:', model {}
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 302 FOUND
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui.html
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui.html
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2026-06-26 21:02:08 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 302 FOUND
+2026-06-26 21:02:08 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2026-06-26 21:02:08 [http-nio-8081-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2026-06-26 21:02:08 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2026-06-26 21:02:08 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2026-06-26 21:02:08 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-06-26 21:02:08 [http-nio-8081-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-10] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2026-06-26 21:02:08 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-06-26 21:02:08 [http-nio-8081-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-06-26 21:02:08 [http-nio-8081-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2026-06-26 21:02:08 [http-nio-8081-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2026-06-26 21:02:08 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2026-06-26 21:02:08 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-06-26 21:02:08 [http-nio-8081-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2026-06-26 21:02:08 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/favicon-32x32.png
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-06-26 21:02:08 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/favicon-32x32.png
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/swagger-ui/oauth2-re (truncated)...]
+2026-06-26 21:02:08 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-26 21:02:08 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-06-26 21:02:08 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-06-26 21:02:09 [http-nio-8081-exec-1] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 964 ms
+2026-06-26 21:02:09 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-06-26 21:02:09 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-06-26 21:02:09 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/v1/authors
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG c.e.l.s.UserDetailsServiceImpl - Loading user by username: admin
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG c.e.l.s.UserDetailsServiceImpl - User found: admin with roles: [ADMIN]
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.s.w.a.w.BasicAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/v1/authors
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/authors", parameters={}
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#getAllAuthors()
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAllAuthors(); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.getAllAuthors(); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:03:51 [http-nio-8081-exec-6] INFO  c.e.l.controller.AuthorController - GET /api/v1/authors - Fetching all authors
+2026-06-26 21:03:51 [http-nio-8081-exec-6] INFO  c.e.library.service.AuthorService - Fetching all authors
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id,
+        a1_0.biography,
+        a1_0.birth_year,
+        a1_0.created_at,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.updated_at 
+    from
+        authors a1_0
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG c.e.library.service.AuthorService - Found 1 authors
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[AuthorDTO(id=21, firstName=Tarun, lastName=Singh, email=ts523753@gmail.com, biography=Noob, birthYe (truncated)...]
+2026-06-26 21:03:51 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/authors
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG c.e.l.s.UserDetailsServiceImpl - Loading user by username: librarian
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG c.e.l.s.UserDetailsServiceImpl - User found: librarian with roles: [LIBRARIAN]
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.s.w.a.w.BasicAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=librarian, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_LIBRARIAN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_LIBRARIAN]]
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Jun 26 21:05:10 IST 2026, status=403, error=Forbidden, message=Forbidden, path=/api/v (truncated)...]
+2026-06-26 21:05:10 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 403
+2026-06-26 21:05:32 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/v1/authors
+2026-06-26 21:05:32 [http-nio-8081-exec-7] DEBUG c.e.l.s.UserDetailsServiceImpl - Loading user by username: admin
+2026-06-26 21:05:32 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-06-26 21:05:32 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.user_id,
+        r1_0.role 
+    from
+        user_roles r1_0 
+    where
+        r1_0.user_id=?
+2026-06-26 21:05:32 [http-nio-8081-exec-7] DEBUG c.e.l.s.UserDetailsServiceImpl - User found: admin with roles: [ADMIN]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.s.w.a.w.BasicAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/v1/authors
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/authors", parameters={}
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.library.controller.AuthorController#createAuthor(AuthorDTO)
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [AuthorDTO(id=null, firstName=Chetan, lastName=Bhagat, email=chetan.bhagat@example.com, biography=Pop (truncated)...]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.s.a.m.AuthorizationManagerBeforeMethodInterceptor - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.example.library.controller.AuthorController.createAuthor(com.example.library.dto.AuthorDTO); target is of class [com.example.library.controller.AuthorController]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] INFO  c.e.l.controller.AuthorController - POST /api/v1/authors - Creating new author
+2026-06-26 21:05:33 [http-nio-8081-exec-7] INFO  c.e.library.service.AuthorService - Creating new author: Chetan Bhagat
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id 
+    from
+        authors a1_0 
+    where
+        a1_0.email=? 
+    fetch
+        first ? rows only
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        a1_0.id 
+    from
+        authors a1_0 
+    where
+        a1_0.first_name=? 
+        and a1_0.last_name=? 
+    fetch
+        first ? rows only
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.example.library.entity.Author */insert 
+    into
+        authors (biography,birth_year,created_at,email,first_name,last_name,updated_at,id) 
+    values
+        (?,?,?,?,?,?,?,default)
+2026-06-26 21:05:33 [http-nio-8081-exec-7] INFO  c.e.library.service.AuthorService - Author created successfully with id: 617
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [AuthorDTO(id=617, firstName=Chetan, lastName=Bhagat, email=chetan.bhagat@example.com, biography=Popu (truncated)...]
+2026-06-26 21:05:33 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+2026-06-26 21:07:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 21:07:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 21:07:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

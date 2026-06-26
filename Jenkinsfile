@@ -24,7 +24,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                dir('author-book-management') {
+                dir('Project') {
                      sh 'mvn clean compile'
                 }
             }
@@ -32,7 +32,7 @@ pipeline {
         
         stage('Unit Tests') {
             steps {
-                dir('author-book-management') {
+                dir('Project') {
                     echo "========== Stage: Unit Tests =========="
                     sh 'mvn test'
                 }
@@ -57,7 +57,7 @@ pipeline {
         
         stage('Package') {
             steps {
-                dir('author-book-management'){
+                dir('Project'){
                     echo "========== Stage: Package =========="
                     sh 'mvn package -DskipTests'
                 }
@@ -79,7 +79,7 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                dir('author-book-management') {
+                dir('Project') {
                     echo "========== Stage: Build Docker Image =========="
                     sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
                     sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
@@ -89,7 +89,7 @@ pipeline {
         
         stage('Push Docker Image') {
             steps {
-                dir('author-book-management') {
+                dir('Project') {
                     echo "========== Stage: Push Docker Image =========="
                     // Login to Docker registry and push
                     // withCredentials([usernamePassword(credentialsId: 'docker-credentials', 
@@ -114,7 +114,7 @@ pipeline {
         
         stage('Integration Tests') {
             steps {
-                dir('author-book-management') {
+                dir('Project') {
                     echo "========== Stage: Integration Tests =========="
                     sh 'pwd'
                     sh 'ls -la'
