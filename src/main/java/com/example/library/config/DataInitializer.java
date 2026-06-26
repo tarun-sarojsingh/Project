@@ -3,7 +3,6 @@ package com.example.library.config;
 import com.example.library.entity.User;
 import com.example.library.repository.UserRepository;
 
-import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
@@ -16,11 +15,9 @@ import java.util.Set;
 @RequiredArgsConstructor
 @Slf4j
 public class DataInitializer implements CommandLineRunner {
-    
-	@Resource
-    private  UserRepository userRepository ;
-	@Resource
-    private  PasswordEncoder passwordEncoder ;
+
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
     
     @Override
     public void run(String... args) {
