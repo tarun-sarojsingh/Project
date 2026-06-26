@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BookController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Author Book Management System</a> &gt; <a href="index.source.html" class="el_package">com.example.library.controller</a> &gt; <span class="el_source">BookController.java</span></div><h1>BookController.java</h1><pre class="source lang-java linenums">package com.example.library.controller;
+
+import com.example.library.dto.BookDTO;
+import com.example.library.service.BookService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(&quot;/api/v1/books&quot;)
+<span class="fc" id="L20">@RequiredArgsConstructor</span>
+<span class="fc" id="L21">@Slf4j</span>
+@Tag(name = &quot;Book Management&quot;, description = &quot;APIs for managing books&quot;)
+@SecurityRequirement(name = &quot;basicAuth&quot;)
+public class BookController {
+    
+    private final BookService bookService;
+    
+    @GetMapping
+    @PreAuthorize(&quot;hasAnyRole('ADMIN', 'LIBRARIAN')&quot;)
+    @Operation(summary = &quot;Get all books&quot;, description = &quot;Retrieve a list of all books&quot;)
+    public ResponseEntity&lt;List&lt;BookDTO&gt;&gt; getAllBooks() {
+<span class="fc" id="L32">        log.info(&quot;GET /api/v1/books - Fetching all books&quot;);</span>
+<span class="fc" id="L33">        List&lt;BookDTO&gt; books = bookService.getAllBooks();</span>
+<span class="fc" id="L34">        return ResponseEntity.ok(books);</span>
+    }
+    
+    @GetMapping(&quot;/{id}&quot;)
+    @PreAuthorize(&quot;hasAnyRole('ADMIN', 'LIBRARIAN')&quot;)
+    @Operation(summary = &quot;Get book by ID&quot;, description = &quot;Retrieve a specific book by its ID&quot;)
+    public ResponseEntity&lt;BookDTO&gt; getBookById(@PathVariable Long id) {
+<span class="fc" id="L41">        log.info(&quot;GET /api/v1/books/{} - Fetching book&quot;, id);</span>
+<span class="fc" id="L42">        BookDTO book = bookService.getBookById(id);</span>
+<span class="fc" id="L43">        return ResponseEntity.ok(book);</span>
+    }
+    
+    @PostMapping
+    @PreAuthorize(&quot;hasRole('ADMIN')&quot;)
+    @Operation(summary = &quot;Create new book&quot;, description = &quot;Create a new book&quot;)
+    public ResponseEntity&lt;BookDTO&gt; createBook(@Valid @RequestBody BookDTO bookDTO) {
+<span class="fc" id="L50">        log.info(&quot;POST /api/v1/books - Creating new book&quot;);</span>
+<span class="fc" id="L51">        BookDTO createdBook = bookService.createBook(bookDTO);</span>
+<span class="fc" id="L52">        return ResponseEntity.status(HttpStatus.CREATED).body(createdBook);</span>
+    }
+    
+    @PutMapping(&quot;/{id}&quot;)
+    @PreAuthorize(&quot;hasRole('ADMIN')&quot;)
+    @Operation(summary = &quot;Update book&quot;, description = &quot;Update an existing book&quot;)
+    public ResponseEntity&lt;BookDTO&gt; updateBook(
+            @PathVariable Long id,
+            @Valid @RequestBody BookDTO bookDTO) {
+<span class="fc" id="L61">        log.info(&quot;PUT /api/v1/books/{} - Updating book&quot;, id);</span>
+<span class="fc" id="L62">        BookDTO updatedBook = bookService.updateBook(id, bookDTO);</span>
+<span class="fc" id="L63">        return ResponseEntity.ok(updatedBook);</span>
+    }
+    
+    @DeleteMapping(&quot;/{id}&quot;)
+    @PreAuthorize(&quot;hasRole('ADMIN')&quot;)
+    @Operation(summary = &quot;Delete book&quot;, description = &quot;Delete a book by ID&quot;)
+    public ResponseEntity&lt;Void&gt; deleteBook(@PathVariable Long id) {
+<span class="fc" id="L70">        log.info(&quot;DELETE /api/v1/books/{} - Deleting book&quot;, id);</span>
+<span class="fc" id="L71">        bookService.deleteBook(id);</span>
+<span class="fc" id="L72">        return ResponseEntity.noContent().build();</span>
+    }
+    
+    @PutMapping(&quot;/bulk&quot;)
+    @PreAuthorize(&quot;hasRole('ADMIN')&quot;)
+    @Operation(summary = &quot;Bulk update books&quot;, description = &quot;Update multiple books at once&quot;)
+    public ResponseEntity&lt;List&lt;BookDTO&gt;&gt; bulkUpdateBooks(@Valid @RequestBody List&lt;BookDTO&gt; bookDTOs) {
+<span class="nc" id="L79">        log.info(&quot;PUT /api/v1/books/bulk - Bulk updating {} books&quot;, bookDTOs.size());</span>
+<span class="nc" id="L80">        List&lt;BookDTO&gt; updatedBooks = bookService.bulkUpdateBooks(bookDTOs);</span>
+<span class="nc" id="L81">        return ResponseEntity.ok(updatedBooks);</span>
+    }
+    
+    @GetMapping(&quot;/author/{authorId}&quot;)
+    @PreAuthorize(&quot;hasAnyRole('ADMIN', 'LIBRARIAN')&quot;)
+    @Operation(summary = &quot;Get books by author&quot;, description = &quot;Retrieve all books by a specific author&quot;)
+    public ResponseEntity&lt;List&lt;BookDTO&gt;&gt; getBooksByAuthor(@PathVariable Long authorId) {
+<span class="nc" id="L88">        log.info(&quot;GET /api/v1/books/author/{} - Fetching books by author&quot;, authorId);</span>
+<span class="nc" id="L89">        List&lt;BookDTO&gt; books = bookService.getBooksByAuthor(authorId);</span>
+<span class="nc" id="L90">        return ResponseEntity.ok(books);</span>
+    }
+    
+    @GetMapping(&quot;/search&quot;)
+    @PreAuthorize(&quot;hasAnyRole('ADMIN', 'LIBRARIAN')&quot;)
+    @Operation(summary = &quot;Search books&quot;, description = &quot;Search books by title&quot;)
+    public ResponseEntity&lt;List&lt;BookDTO&gt;&gt; searchBooks(@RequestParam String title) {
+<span class="nc" id="L97">        log.info(&quot;GET /api/v1/books/search?title={}&quot;, title);</span>
+<span class="nc" id="L98">        List&lt;BookDTO&gt; books = bookService.searchBooksByTitle(title);</span>
+<span class="nc" id="L99">        return ResponseEntity.ok(books);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

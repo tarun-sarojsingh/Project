@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthorDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Author Book Management System</a> &gt; <a href="index.source.html" class="el_package">com.example.library.dto</a> &gt; <span class="el_source">AuthorDTO.java</span></div><h1>AuthorDTO.java</h1><pre class="source lang-java linenums">package com.example.library.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.validation.constraints.*;
+import lombok.*;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+<span class="pc bnc" id="L10" title="All 78 branches missed.">@Data</span>
+<span class="pc" id="L11">@Builder</span>
+<span class="fc" id="L12">@NoArgsConstructor</span>
+<span class="fc" id="L13">@AllArgsConstructor</span>
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class AuthorDTO {
+    
+<span class="fc" id="L17">    private Long id;</span>
+    
+    @NotBlank(message = &quot;First name is required&quot;)
+    @Size(min = 2, max = 50, message = &quot;First name must be between 2 and 50 characters&quot;)
+<span class="fc" id="L21">    private String firstName;</span>
+    
+    @NotBlank(message = &quot;Last name is required&quot;)
+    @Size(min = 2, max = 50, message = &quot;Last name must be between 2 and 50 characters&quot;)
+<span class="fc" id="L25">    private String lastName;</span>
+    
+    @NotBlank(message = &quot;Email is required&quot;)
+    @Email(message = &quot;Email should be valid&quot;)
+<span class="fc" id="L29">    private String email;</span>
+    
+    @Size(max = 500, message = &quot;Biography cannot exceed 500 characters&quot;)
+<span class="fc" id="L32">    private String biography;</span>
+    
+    @Min(value = 1000, message = &quot;Birth year must be after 1000&quot;)
+    @Max(value = 2024, message = &quot;Birth year cannot be in the future&quot;)
+<span class="fc" id="L36">    private Integer birthYear;</span>
+    
+<span class="fc" id="L38">    private List&lt;BookDTO&gt; books;</span>
+    
+<span class="fc" id="L40">    private LocalDateTime createdAt;</span>
+    
+<span class="fc" id="L42">    private LocalDateTime updatedAt;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

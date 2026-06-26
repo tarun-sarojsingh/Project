@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthorService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Author Book Management System</a> &gt; <a href="index.source.html" class="el_package">com.example.library.service</a> &gt; <span class="el_source">AuthorService.java</span></div><h1>AuthorService.java</h1><pre class="source lang-java linenums">package com.example.library.service;
+
+import com.example.library.dto.AuthorDTO;
+import com.example.library.dto.BookDTO;
+import com.example.library.entity.Author;
+import com.example.library.exception.DuplicateResourceException;
+import com.example.library.exception.ResourceNotFoundException;
+import com.example.library.repository.AuthorRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+<span class="fc" id="L18">@RequiredArgsConstructor</span>
+<span class="fc" id="L19">@Slf4j</span>
+@Transactional(readOnly = true)
+public class AuthorService {
+    
+    private final AuthorRepository authorRepository;
+    
+    public List&lt;AuthorDTO&gt; getAllAuthors() {
+<span class="fc" id="L26">        log.info(&quot;Fetching all authors&quot;);</span>
+<span class="fc" id="L27">        List&lt;Author&gt; authors = authorRepository.findAll();</span>
+<span class="fc" id="L28">        log.debug(&quot;Found {} authors&quot;, authors.size());</span>
+<span class="fc" id="L29">        return authors.stream()</span>
+<span class="fc" id="L30">                .map(this::convertToDTO)</span>
+<span class="fc" id="L31">                .collect(Collectors.toList());</span>
+    }
+    
+    public AuthorDTO getAuthorById(Long id) {
+<span class="fc" id="L35">        log.info(&quot;Fetching author with id: {}&quot;, id);</span>
+<span class="fc" id="L36">        Author author = authorRepository.findByIdWithBooks(id)</span>
+<span class="fc" id="L37">                .orElseThrow(() -&gt; {</span>
+<span class="fc" id="L38">                    log.error(&quot;Author not found with id: {}&quot;, id);</span>
+<span class="fc" id="L39">                    return new ResourceNotFoundException(&quot;Author not found with id: &quot; + id);</span>
+                });
+<span class="fc" id="L41">        return convertToDTOWithBooks(author);</span>
+    }
+    
+    @Transactional
+    public AuthorDTO createAuthor(AuthorDTO authorDTO) {
+<span class="fc" id="L46">        log.info(&quot;Creating new author: {} {}&quot;, authorDTO.getFirstName(), authorDTO.getLastName());</span>
+        
+<span class="fc" id="L48">        validateAuthorUniqueness(authorDTO);</span>
+        
+<span class="fc" id="L50">        Author author = convertToEntity(authorDTO);</span>
+<span class="fc" id="L51">        Author savedAuthor = authorRepository.save(author);</span>
+        
+<span class="fc" id="L53">        log.info(&quot;Author created successfully with id: {}&quot;, savedAuthor.getId());</span>
+<span class="fc" id="L54">        return convertToDTO(savedAuthor);</span>
+    }
+    
+    @Transactional
+    public AuthorDTO updateAuthor(Long id, AuthorDTO authorDTO) {
+<span class="fc" id="L59">        log.info(&quot;Updating author with id: {}&quot;, id);</span>
+        
+<span class="fc" id="L61">        Author existingAuthor = authorRepository.findById(id)</span>
+<span class="fc" id="L62">                .orElseThrow(() -&gt; {</span>
+<span class="nc" id="L63">                    log.error(&quot;Author not found with id: {}&quot;, id);</span>
+<span class="nc" id="L64">                    return new ResourceNotFoundException(&quot;Author not found with id: &quot; + id);</span>
+                });
+        
+        // Check for duplicates excluding current author
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        if (!existingAuthor.getEmail().equals(authorDTO.getEmail()) &amp;&amp; </span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">            authorRepository.existsByEmail(authorDTO.getEmail())) {</span>
+<span class="nc" id="L70">            log.error(&quot;Email already exists: {}&quot;, authorDTO.getEmail());</span>
+<span class="nc" id="L71">            throw new DuplicateResourceException(&quot;Email already exists: &quot; + authorDTO.getEmail());</span>
+        }
+        
+<span class="fc" id="L74">        updateAuthorFields(existingAuthor, authorDTO);</span>
+<span class="fc" id="L75">        Author updatedAuthor = authorRepository.save(existingAuthor);</span>
+        
+<span class="fc" id="L77">        log.info(&quot;Author updated successfully with id: {}&quot;, id);</span>
+<span class="fc" id="L78">        return convertToDTO(updatedAuthor);</span>
+    }
+    
+    @Transactional
+    public void deleteAuthor(Long id) {
+<span class="fc" id="L83">        log.info(&quot;Deleting author with id: {}&quot;, id);</span>
+        
+<span class="fc" id="L85">        Author author = authorRepository.findById(id)</span>
+<span class="fc" id="L86">                .orElseThrow(() -&gt; {</span>
+<span class="nc" id="L87">                    log.error(&quot;Author not found with id: {}&quot;, id);</span>
+<span class="nc" id="L88">                    return new ResourceNotFoundException(&quot;Author not found with id: &quot; + id);</span>
+                });
+        
+<span class="fc" id="L91">        authorRepository.delete(author);</span>
+<span class="fc" id="L92">        log.info(&quot;Author deleted successfully with id: {}&quot;, id);</span>
+<span class="fc" id="L93">    }</span>
+    
+    public List&lt;AuthorDTO&gt; searchAuthorsByLastName(String lastName) {
+<span class="fc" id="L96">        log.info(&quot;Searching authors by last name: {}&quot;, lastName);</span>
+<span class="fc" id="L97">        return authorRepository.findByLastNameContainingIgnoreCase(lastName)</span>
+<span class="fc" id="L98">                .stream()</span>
+<span class="fc" id="L99">                .map(this::convertToDTO)</span>
+<span class="fc" id="L100">                .collect(Collectors.toList());</span>
+    }
+    
+    private void validateAuthorUniqueness(AuthorDTO authorDTO) {
+<span class="fc bfc" id="L104" title="All 2 branches covered.">        if (authorRepository.existsByEmail(authorDTO.getEmail())) {</span>
+<span class="fc" id="L105">            log.error(&quot;Email already exists: {}&quot;, authorDTO.getEmail());</span>
+<span class="fc" id="L106">            throw new DuplicateResourceException(&quot;Email already exists: &quot; + authorDTO.getEmail());</span>
+        }
+        
+<span class="pc bpc" id="L109" title="1 of 2 branches missed.">        if (authorRepository.existsByFirstNameAndLastName(</span>
+<span class="fc" id="L110">                authorDTO.getFirstName(), authorDTO.getLastName())) {</span>
+<span class="nc" id="L111">            log.error(&quot;Author with same name already exists: {} {}&quot;, </span>
+<span class="nc" id="L112">                    authorDTO.getFirstName(), authorDTO.getLastName());</span>
+<span class="nc" id="L113">            throw new DuplicateResourceException(</span>
+<span class="nc" id="L114">                    &quot;Author already exists with name: &quot; + authorDTO.getFirstName() + &quot; &quot; + authorDTO.getLastName());</span>
+        }
+<span class="fc" id="L116">    }</span>
+    
+    private void updateAuthorFields(Author author, AuthorDTO dto) {
+<span class="fc" id="L119">        author.setFirstName(dto.getFirstName());</span>
+<span class="fc" id="L120">        author.setLastName(dto.getLastName());</span>
+<span class="fc" id="L121">        author.setEmail(dto.getEmail());</span>
+<span class="fc" id="L122">        author.setBiography(dto.getBiography());</span>
+<span class="fc" id="L123">        author.setBirthYear(dto.getBirthYear());</span>
+<span class="fc" id="L124">    }</span>
+    
+    private AuthorDTO convertToDTO(Author author) {
+<span class="fc" id="L127">        return AuthorDTO.builder()</span>
+<span class="fc" id="L128">                .id(author.getId())</span>
+<span class="fc" id="L129">                .firstName(author.getFirstName())</span>
+<span class="fc" id="L130">                .lastName(author.getLastName())</span>
+<span class="fc" id="L131">                .email(author.getEmail())</span>
+<span class="fc" id="L132">                .biography(author.getBiography())</span>
+<span class="fc" id="L133">                .birthYear(author.getBirthYear())</span>
+<span class="fc" id="L134">                .createdAt(author.getCreatedAt())</span>
+<span class="fc" id="L135">                .updatedAt(author.getUpdatedAt())</span>
+<span class="fc" id="L136">                .build();</span>
+    }
+    
+    private AuthorDTO convertToDTOWithBooks(Author author) {
+<span class="fc" id="L140">        AuthorDTO dto = convertToDTO(author);</span>
+<span class="fc" id="L141">        List&lt;BookDTO&gt; bookDTOs = author.getBooks().stream()</span>
+<span class="pc" id="L142">                .map(book -&gt; BookDTO.builder()</span>
+<span class="nc" id="L143">                        .id(book.getId())</span>
+<span class="nc" id="L144">                        .title(book.getTitle())</span>
+<span class="nc" id="L145">                        .isbn(book.getIsbn())</span>
+<span class="nc" id="L146">                        .genre(book.getGenre())</span>
+<span class="nc" id="L147">                        .publicationYear(book.getPublicationYear())</span>
+<span class="nc" id="L148">                        .build())</span>
+<span class="fc" id="L149">                .collect(Collectors.toList());</span>
+<span class="fc" id="L150">        dto.setBooks(bookDTOs);</span>
+<span class="fc" id="L151">        return dto;</span>
+    }
+    
+    private Author convertToEntity(AuthorDTO dto) {
+<span class="fc" id="L155">        return Author.builder()</span>
+<span class="fc" id="L156">                .firstName(dto.getFirstName())</span>
+<span class="fc" id="L157">                .lastName(dto.getLastName())</span>
+<span class="fc" id="L158">                .email(dto.getEmail())</span>
+<span class="fc" id="L159">                .biography(dto.getBiography())</span>
+<span class="fc" id="L160">                .birthYear(dto.getBirthYear())</span>
+<span class="fc" id="L161">                .build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
