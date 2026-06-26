@@ -24,18 +24,14 @@ pipeline {
         
         stage('Build') {
             steps {
-                dir('Project') {
-                     sh 'mvn clean compile'
-                }
+                sh 'mvn clean compile'
             }
         }
         
         stage('Unit Tests') {
             steps {
-                dir('Project') {
-                    echo "========== Stage: Unit Tests =========="
-                    sh 'mvn test'
-                }
+                echo "========== Stage: Unit Tests =========="
+                sh 'mvn test'
             }
             post {
                 always {
@@ -57,10 +53,8 @@ pipeline {
         
         stage('Package') {
             steps {
-                dir('Project'){
-                    echo "========== Stage: Package =========="
-                    sh 'mvn package -DskipTests'
-                }
+                echo "========== Stage: Package =========="
+                sh 'mvn package -DskipTests'
             }
             post {
                 success {
@@ -71,36 +65,40 @@ pipeline {
 
         stage('Debug') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-                sh 'find . -name pom.xml'
+                script {
+                    if (isUnix()) {
+                        sh 'pwd'
+                        sh 'ls -la'
+                        sh 'find . -name pom.xml'
+                    } else {
+                        bat 'cd'
+                        bat 'dir'
+                        bat 'where /r . pom.xml'
+                    }
+                }
             }
         }
         
         stage('Build Docker Image') {
             steps {
-                dir('Project') {
-                    echo "========== Stage: Build Docker Image =========="
-                    sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
-                    sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
-                }
+                echo "========== Stage: Build Docker Image =========="
+                sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
+                sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
             }
         }
         
         stage('Push Docker Image') {
             steps {
-                dir('Project') {
-                    echo "========== Stage: Push Docker Image =========="
-                    // Login to Docker registry and push
-                    // withCredentials([usernamePassword(credentialsId: 'docker-credentials', 
-                    //                                   usernameVariable: 'DOCKER_USERNAME', 
-                    //                                   passwordVariable: 'DOCKER_PASSWORD')]) {
-                    //     sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
-                    //     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-                    //     sh "docker push ${DOCKER_IMAGE}:latest"
-                    // }
-                    echo 'Docker image built successfully'
-                }
+                echo "========== Stage: Push Docker Image =========="
+                // Login to Docker registry and push
+                // withCredentials([usernamePassword(credentialsId: 'docker-credentials', 
+                //                                   usernameVariable: 'DOCKER_USERNAME', 
+                //                                   passwordVariable: 'DOCKER_PASSWORD')]) {
+                //     sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                //     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                //     sh "docker push ${DOCKER_IMAGE}:latest"
+                // }
+                echo 'Docker image built successfully'
             }
         }
         
@@ -114,12 +112,10 @@ pipeline {
         
         stage('Integration Tests') {
             steps {
-                dir('Project') {
-                    echo "========== Stage: Integration Tests =========="
-                    sh 'pwd'
-                    sh 'ls -la'
-                    sh 'mvn verify'
-                }
+                echo "========== Stage: Integration Tests =========="
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'mvn verify'
             }
         }
         
